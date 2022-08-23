@@ -6,7 +6,7 @@ const compression = require('compression');
 const router = require('./routes');
 
 const app = express();
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression());
