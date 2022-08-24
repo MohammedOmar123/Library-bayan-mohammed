@@ -110,7 +110,7 @@ color: aliceblue;
     font-family: inherit;
     /* color: aliceblue; */
 }
-.add-book , .add-category{
+.add-book-pop , .add-category-pop{
     /* padding: 1rem 3rem; */
     background-color: #ab71f4;
     color: aliceblue;
@@ -413,5 +413,9 @@ header button{
     }
 }
 
-
+.massage {
+    font-size: large;
+    color: white;
+    
+}
 

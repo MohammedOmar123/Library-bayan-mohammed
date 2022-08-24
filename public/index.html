@@ -20,11 +20,12 @@
       <div class="po-up">
         <ion-icon name="close-outline" class="close"></ion-icon>
         <h3>Add Book</h3>
-        <form action="/addBook" method="post">
+        <form>
           <div class="form-controller">
             <label>Name :</label>
             <input
               type="text"
+              class="book-name"
               placeholder="book name"
               pattern="[A-Za-z]{2,20}"
               title="At least two letters"
@@ -35,6 +36,7 @@
             <label>Book Cover Link:</label>
             <input
               type="text"
+              class="book-img"
               placeholder="Book Cover"
               pattern="https?://.+"
               title="Include http://"
@@ -44,13 +46,10 @@
           <div class="form-controller">
             <label>Category :</label>
             <select class="select" name="category_id">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+        
             </select>
           </div>
-          <button class="add-book">Add Book</button>
+          <button class="add-book-pop">Add Book</button>
         </form>
       </div>
     </div>
@@ -59,10 +58,11 @@
       <div class="po-up">
         <ion-icon name="close-outline" class="close"></ion-icon>
         <h3>Add Category</h3>
-        <form action="/addBook" method="post">
+        <form>
           <div class="form-controller">
             <label>Name :</label>
             <input
+              class="CategoryInput"
               type="text"
               placeholder="category name"
               pattern="[A-Za-z]{2,20}"
@@ -70,15 +70,17 @@
               required
             />
           </div>
-          <button class="add-category">Add Category</button>
         </form>
+        <button class="add-category-pop">Add Category</button>
+        <p class="massage"></p>
       </div>
+     
     </div>
     <header>
       <h1 class="home-title"><a href="/">Books Station</a></h1>
       <div>
         <button class="add-category">Add Category</button>
-        <button>Add Book</button>
+        <button class="add-book">Add Book</button>
       </div>
     </header>
 
