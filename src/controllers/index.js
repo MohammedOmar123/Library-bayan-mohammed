@@ -1,3 +1,4 @@
 const getHomePage = require('./getHome');
-
-module.exports = getHomePage;
+const {sendhome}=require('./getBooks')
+const {getDataBooks} = require('./getBooks');
+module.exports = { getHomePage , getDataBooks ,sendhome};
