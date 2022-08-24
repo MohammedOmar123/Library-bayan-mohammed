@@ -2,7 +2,6 @@ const { Pool } = require('pg');
 require('env2')('.env');
 
 let dbUrl = '';
-if (!dbUrl) throw new Error('Environment variable DB_URL must be set');
 
 const {
   NODE_ENV, DATABASE_URL, DEV_DB_URL, TEST_DB_URL,
@@ -21,6 +20,7 @@ switch (NODE_ENV) {
   default:
     throw new Error('No Database is found !');
 }
+
 const connection = new Pool({
   connectionString: dbUrl,
   ssl: NODE_ENV !== 'production' ? false : { rejectUnauthorized: false },
