@@ -7,10 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" :"node src",
-    "dev" :"nodemon src"
+    "start": "NODE_ENV=production node src",
+    "dev": "NODE_ENV=development nodemon src",
+    "test": "NODE_ENV=test jest"
   },
+  
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CA-G12/Library-bayan-mohammed.git"

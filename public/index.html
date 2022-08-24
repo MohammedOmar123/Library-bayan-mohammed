@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books App</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- pop-up for add book -->
+    <div class="po-up-continer1">
+      <div class="po-up">
+        <ion-icon name="close-outline" class="close"></ion-icon>
+        <h3>Add Book</h3>
+        <form action="/addBook" method="post">
+          <div class="form-controller">
+            <label>Name :</label>
+            <input
+              type="text"
+              placeholder="book name"
+              pattern="[A-Za-z]{2,20}"
+              title="At least two letters"
+              required
+            />
+          </div>
+          <div class="form-controller">
+            <label>Book Cover Link:</label>
+            <input
+              type="text"
+              placeholder="Book Cover"
+              pattern="https?://.+"
+              title="Include http://"
+              required
+            />
+          </div>
+          <div class="form-controller">
+            <label>Category :</label>
+            <select class="select" name="category_id">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <button class="add-book">Add Book</button>
+        </form>
+      </div>
+    </div>
+    <!-- pop-up for add category -->
+    <div class="po-up-continer2">
+      <div class="po-up">
+        <ion-icon name="close-outline" class="close"></ion-icon>
+        <h3>Add Category</h3>
+        <form action="/addBook" method="post">
+          <div class="form-controller">
+            <label>Name :</label>
+            <input
+              type="text"
+              placeholder="category name"
+              pattern="[A-Za-z]{2,20}"
+              title="At least two letters"
+              required
+            />
+          </div>
+          <button class="add-category">Add Category</button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <h1 class="home-title"><a href="/">Books Station</a></h1>
+      <div>
+        <button class="add-category">Add Category</button>
+        <button>Add Book</button>
+      </div>
+    </header>
+
+    <section class="suggested-books">
+      <h2 class="section-title">Suggested Books</h2>
+      <div class="suggested-cards">
+        <div class="card">
+          <img
+            src="http://books.google.com/books/content?id=2ZiSCwAAQBAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"
+            alt="Great Expectations"
+          />
+          <div class="card-content">
+            <h3 class="title">Great Expectations</h3>
+            <p class="lang">Language : <span>en</span></p>
+            <p class="Publish">Publish : <span>1980-04-11</span></p>
+            <button class="btn">
+              <a
+                href="http://books.google.com/books?id=2ZiSCwAAQBAJ&amp;dq=great+expectaions&amp;hl=&amp;source=gbs_api"
+                >Read Now</a
+              >
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="http://books.google.com/books/content?id=qx8sDwAAQBAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"
+            alt="Sherlock: The Blind Banker #3"
+          />
+          <div class="card-content">
+            <h3 class="title">Sherlock: The Blind Banker #3</h3>
+            <p class="lang">Language : <span>en</span></p>
+            <p class="Publish">Publish : <span>2017-03-08</span></p>
+            <button class="btn">
+              <a
+                href="http://books.google.com/books?id=qx8sDwAAQBAJ&amp;dq=sharlok&amp;hl=&ampsource=gbs_api"
+                >Read Now
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="http://books.google.com/books/content?id=92lQfWj6_VIC&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api"
+            alt="Islam in the World"
+          />
+          <div class="card-content">
+            <h3 class="title">Islam in the World</h3>
+            <p class="lang">Language : <span>en</span></p>
+            <p class="Publish">Publish : <span>2006</span></p>
+            <button class="btn">
+              <a
+                href="http://books.google.com/books?id=92lQfWj6_VIC&amp;dq=islam&amp;hl=&amp;source=gbs_api"
+                >Read Now</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/dom.js"></script>
+    <script src="./js/fetch.js"></script>
+  </body>
 </html>

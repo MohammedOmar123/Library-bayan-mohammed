@@ -12,8 +12,6 @@ create table books (
 
             category_id int not null ,
         FOREIGN KEY (category_id) REFERENCES categories(id)
-    -- foreign key (highestStudent_id) 
-    --  REFERENCES students (student_id)
 );
 
 insert into categories (cName) values
