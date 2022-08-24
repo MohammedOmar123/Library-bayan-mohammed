@@ -10,7 +10,7 @@
     "start": "cross-env NODE_ENV=production node src",
     "dev": "cross-env NODE_ENV=development nodemon src",
     "test": "cross-env NODE_ENV=test jest"
-  },
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CA-G12/Library-bayan-mohammed.git"
