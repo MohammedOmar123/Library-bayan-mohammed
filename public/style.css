@@ -110,7 +110,7 @@ color: aliceblue;
     font-family: inherit;
     /* color: aliceblue; */
 }
-.add-book-pop , .add-category-pop{
+.add-book-pop , .add-category-pop,.update-book-pop{
     /* padding: 1rem 3rem; */
     background-color: #ab71f4;
     color: aliceblue;
@@ -419,3 +419,17 @@ header button{
     
 }
 
+.form-all{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.massage-book {
+    font-size: large;
+    color: white;
+}
+.div-buttons{
+    display: flex;
+    margin-top: 10%;
+}
