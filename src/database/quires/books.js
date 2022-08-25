@@ -5,7 +5,7 @@ const getAllBooks = () => connection.query(' SELECT books.id , books.bName , boo
 
 const postBook =(name ,imgUrl , id) =>
      connection.query({
-        text: 'INSERT INTO books (bName, img, category_id) VALUES ($1, $2, $3);',
+        text: 'INSERT INTO books (bName, img, category_id) VALUES ($1, $2, $3) returning *;',
         values: [name, imgUrl, id],
       });
 
