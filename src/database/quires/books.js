@@ -11,7 +11,17 @@ const updateBook = (id, bookName, img, categoryName) => connection.query({
   values: [bookName, img, categoryName, id],
 });
 
+
+const postBook =(name ,imgUrl , id) =>
+     connection.query({
+        text: 'INSERT INTO books (bName, img, category_id) VALUES ($1, $2, $3) returning *;',
+        values: [name, imgUrl, id],
+      });
+
+
+module.exports ={ getAllBooks , postBook }
 const deleteBook = (id) => connection.query(`DELETE FROM books WHERE id ='${id}'`);
 module.exports = {
   getAllBooks, postBook, deleteBook, updateBook,
 };
+
