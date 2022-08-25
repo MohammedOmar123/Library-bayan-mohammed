@@ -14,6 +14,10 @@ app.use(compression());
 app.use(express.static(join(__dirname, '..', 'public')));
 app.use(router);
 
+
+app.use((err, req, res, next) => {
+  res.status(500).json(err);
+});
 app.use(clientErrors);
 app.use(serverErrors);
 
