@@ -1,10 +1,13 @@
 const router = require('express').Router();
 
-const { getHomePage, getDataBooks, insertCategory, getCategories ,postBook } = require('./controllers/index');
+const {
+  getDataBooks, insertCategory, getCategories, postBook, deleteBook, putBook,
+} = require('./controllers/index');
 
-router.get('/test', getHomePage);
-router.get('/getAllBooks', getDataBooks);
+router.get('/AllBooks', getDataBooks);
 router.post('/category', insertCategory);
-router.get('/allcategories', getCategories); // this for options in add books form
-router.post("/book",postBook)
+router.get('/allCategories', getCategories); // this for options in add books form
+router.post('/book', postBook);
+router.put('/book/:id', putBook);
+router.delete('/book/:id', deleteBook);
 module.exports = router;
