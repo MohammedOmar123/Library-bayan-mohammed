@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&family=Rubik+Dirt&display=swap');
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Beginning of header */
+.header{
+    height: 3.2rem;
+    background-color: rgb(42,42,42);
+    display: flex;
+    color: rgb(204,204,204);
+}
+.items {
+    padding: 1rem;
+}
+
+.items ul li  {
+    display: inline;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1.3rem;
+}
+.items ul li a {
+    text-decoration: none;
+}
+.current-li{
+    color: rgb(52,120,246);
+    font-weight: bold;
+}
+
+/* End of header */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(18,18,18);
+}
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 50px;
+}
+
+h3 {
+    color: rgba(255, 255, 255);
+
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.755);
+    margin-top: 20px;
+}
+.btn-go {
+    color: #000;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin: 35px auto;
+    padding: 0.6rem 3rem;
+    transition: all 0.3s ease-in-out;
+    border: 0ch;
+}
+
+.btn-go:hover {
+    background-color: inherit;
+    color: #eee ;
+    outline: 1px solid #eee ;
+
+}
+.link {
+    text-decoration: none;
+}
