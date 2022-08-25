@@ -7,6 +7,8 @@
     <title>Books App</title>
     <!-- css links -->
     <link rel="stylesheet" href="style.css" />
+        <!-- toast massage -->
+        <link rel="stylesheet" href="toast/toast.css" />
     <!-- Font awesome -->
     <link
       rel="stylesheet"
@@ -19,16 +21,14 @@
     <div class="po-up-continer1">
       <div class="po-up">
         <ion-icon name="close-outline" class="close"></ion-icon>
-        <h3>Add Book</h3>
-        <form>
+        <h3 id="add-update-title">Add Your Book</h3>
+        <form class="form-all">
           <div class="form-controller">
             <label>Name :</label>
             <input
               type="text"
               class="book-name"
               placeholder="book name"
-              pattern="[A-Za-z]{2,20}"
-              title="At least two letters"
               required
             />
           </div>
@@ -37,9 +37,7 @@
             <input
               type="text"
               class="book-img"
-              placeholder="Book Cover"
-              pattern="https?://.+"
-              title="Include http://"
+              placeholder="URL Link"
               required
             />
           </div>
@@ -50,6 +48,8 @@
             </select>
           </div>
           <button class="add-book-pop">Add Book</button>
+          <button class="update-book-pop">Update Book</button>
+
         </form>
       </div>
     </div>
@@ -65,21 +65,20 @@
               class="CategoryInput"
               type="text"
               placeholder="category name"
-              pattern="[A-Za-z]{2,20}"
-              title="At least two letters"
               required
             />
+            <p class="ErrorInput" ></p>
           </div>
         </form>
         <button class="add-category-pop">Add Category</button>
-        <p class="massage"></p>
       </div>
      
     </div>
     <header>
       <h1 class="home-title"><a href="/">Books Station</a></h1>
+      <div id="toast"></div>
       <div>
-        <button class="add-category">Add Category</button>
+    <button class="add-category">Add Category</button>
         <button class="add-book">Add Book</button>
       </div>
     </header>
@@ -98,5 +97,6 @@
     ></script>
     <script src="./js/dom.js"></script>
     <script src="./js/fetch.js"></script>
+    <script src="./toast/tosat.js"></script>
   </body>
 </html>
